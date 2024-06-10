@@ -5,4 +5,3 @@ class Solution:
             alt += g
             max_alt = max(max_alt, alt)
         return max_alt
-        
