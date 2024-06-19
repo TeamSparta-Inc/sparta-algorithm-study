@@ -1,4 +1,4 @@
-name: lint directory
+name: Lint Directory names
 
 on: [pull_request]
 
