@@ -6,6 +6,12 @@ ls:
     .dir: regex:.+
   
   .js: regex:[^\s\-]+
+  .ts: regex:[^\s\-]+
+  .py: regex:[^\s\-]+
+  .cs: regex:[^\s\-]+
+  .cpp: regex:[^\s\-]+
+  .java: regex:[^\s\-]+
+  .go: regex:[^\s\-]+
 
 ignore:
   - .git
