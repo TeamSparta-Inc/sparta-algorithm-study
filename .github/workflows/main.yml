@@ -6,16 +6,5 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v3
-    
-    - name: Validate folder names
-      uses: batista/lint-filenames@v2.0.0
-      with:
-        path: './'
-        pattern: '^\\d{4}-([a-zA-Z0-9]+-)*[a-zA-Z0-9]+$'
-    
-    - name: Validate folder names in 'baekjoon'
-      uses: batista/lint-filenames@v2.0.0
-      with:
-        path: './baekjoon/'
-        pattern: '^\\d{4}-([a-zA-Z0-9가-힣]+-)*[a-zA-Z0-9가-힣]+$'
+    - uses: actions/checkout@v4
+    - uses: ls-lint/action@v2.2.3
