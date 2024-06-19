@@ -5,8 +5,7 @@ ls:
   programmers/*:
     .dir: regex:.+
 
-  ./**/:
-    '*': regex:[a-zA-Z0-9]+\.[a-zA-z]+
+  .{js,ts,py,cs,cpp,java,go}: regex:[a-zA-Z0-9]+\.[a-zA-z]+
     
 ignore:
   - .git
