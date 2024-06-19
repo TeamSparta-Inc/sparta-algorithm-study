@@ -1,4 +1,6 @@
 ls:
+  baekjoon:
+    .dir: regex:\d{4}-([a-zA-Z0-9가-힣]+-)*[a-zA-Z0-9가-힣]+
   .dir: regex:\d{4}-([a-zA-Z0-9]+-)*[a-zA-Z0-9]+
     
 ignore:
@@ -7,4 +9,3 @@ ignore:
   - .idea
   - README.md
   - programmers
-  - baekjoon
