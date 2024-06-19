@@ -5,13 +5,13 @@ ls:
   programmers/*:
     .dir: regex:.+
   
-  .js: regex:[^\s]+\.js
-  .ts: regex:[^\s]+\.ts
-  .py: regex:[^\s]+\.py
-  .cs: regex:[^\s]+\.cs
-  .cpp: regex:[^\s]+\.cpp
-  .java: regex:[^\s]+\.java
-  .go: regex:[^\s]+\.go
+  .js: regex:.*\/[a-zA-Z0-9]+\.js
+  .ts: regex:.*\/[a-zA-Z0-9]+\.ts
+  .py: regex:.*\/[a-zA-Z0-9]+\.py
+  .cs: regex:.*\/[a-zA-Z0-9]+\.cs
+  .cpp: regex:.*\/[a-zA-Z0-9]+\.cpp
+  .java: regex:.*\/[a-zA-Z0-9]+\.java
+  .go: regex:.*\/[a-zA-Z0-9]+\.go
 
 ignore:
   - .git
