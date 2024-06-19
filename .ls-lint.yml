@@ -3,6 +3,7 @@ ls:
   baekjoon: 'regex: \d{4}-([a-zA-Z0-9가-힣]+-)*[a-zA-Z0-9가-힣]+'
     
 ignore:
+  - .git
   - .github
   - .idea
   - README.md
