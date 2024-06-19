@@ -1,5 +1,5 @@
 ls:
-  .dir: 'regex: .'
+  .dir: regex:\d{4}-([a-zA-Z0-9]+-)*[a-zA-Z0-9]+
     
 ignore:
   - .git
