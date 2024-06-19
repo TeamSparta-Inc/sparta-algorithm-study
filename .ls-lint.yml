@@ -5,7 +5,7 @@ ls:
   programmers/*:
     .dir: regex:.+
   
-  '**/':
+  '*/**/':
     .js: regex:[a-zA-Z0-9]+\.js
     .ts: regex:[a-zA-Z0-9]+\.ts
     .py: regex:[a-zA-Z0-9]+\.py
