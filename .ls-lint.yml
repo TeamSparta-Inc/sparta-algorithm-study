@@ -1,0 +1,8 @@
+ls:
+  .dir: regex: \d{4}-([a-zA-Z0-9]+-)*[a-zA-Z0-9]+
+  baekjoon: regex: \d{4}-([a-zA-Z0-9가-힣]+-)*[a-zA-Z0-9가-힣]+
+    
+ignore:
+  - .github
+  - .idea
+  - README.md
