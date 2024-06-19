@@ -2,6 +2,8 @@ ls:
   .dir: regex:\d{4}-([a-zA-Z0-9]+-)*[a-zA-Z0-9]+ | regex:(baekjoon|programmers)
   baekjoon/*:
     .dir: regex:\d{4}-([a-zA-Z0-9가-힣]+-)*[a-zA-Z0-9가-힣]+
+  programmers/*:
+    .dir: regex:.
     
 ignore:
   - .git
