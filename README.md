@@ -3,6 +3,9 @@
 알고리즘의 활용을 연습하고 실제 업무에 적용해보기 위해 [🎯leetCode 의 75제](https://leetcode.com/studyplan/leetcode-75/)를 일주일에 하나씩 풀어봅니다.  
 개인의 능력과 진도에 따라 75제 안에서 풀 문제를 자율적으로 선택합니다.
 
-푼 문제는 `/{문제번호4자리}-{문제제목}/{닉네임}.{확장자}` 의 형식으로 저장한 다음,  
-그 날 생성된 이슈를 참조하여 PR을 만드시면 됩니다.
-> 예시) 임의의 branch에 `/0012-Find-the-Highest-Altitude/ganguklee.py` commit 후, PR 생성할 때 `#1` 를 본문에 추가
+푼 문제는  
+**`/{문제번호4자리}-{문제제목}/{닉네임}.{확장자}`**  
+의 형식으로 저장한 다음, 그 날 생성된 이슈를 참조하여 PR을 만드시면 됩니다.
+
+> 예시) 임의의 branch에 `/0012-Find-the-Highest-Altitude/ganguklee.py` commit 후,  
+> PR 생성할 때 `#1` 를 본문에 추가
