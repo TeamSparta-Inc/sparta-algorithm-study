@@ -1,4 +1,3 @@
-
 function mergeAlternately(word1: string, word2: string): string {
     const word1size = word1.length;
     const word2size = word2.length;
@@ -24,6 +23,3 @@ function mergeAlternately(word1: string, word2: string): string {
     }
     return answer
 };
-
-
-mergeAlternately("abc", "pqr")
