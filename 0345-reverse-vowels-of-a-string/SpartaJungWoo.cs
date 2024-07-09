@@ -1,49 +1,35 @@
 public class Solution {
     public string ReverseVowels(string s) {
-        List<char> list = new List<char>();
-        List<int> listCount = new List<int>();
+        List<char> vowels = new List<char>(){'a','A','E', 'e', 'i','I','O','o','u','U'};
+        char[] word= new char[s.Length];
+        int u=s.Length-1;
+        int i=0;
 
-        for (int i=0; i < s.Length; i++)
-        {
-            switch(s[i])
+
+        //leetcode
+        while(i<=u){
+           
+            if(vowels.Any(p=> p==s[i]) && vowels.Any(p=> p==s[u]))
             {
-                case 'a':
-                case 'A':
-                case 'e':
-                case 'E':
-                case 'i':
-                case 'I':
-                case 'o':
-                case 'O':
-                case 'u':
-                case 'U':
-                list.Insert(0, s[i]);
-                listCount.Add( i);
-                break;
-                default:
-                break;
-            }
-        }
-
-        if (list.Count <= 1) return s;
-
-    StringBuilder result = new StringBuilder();
-
-
-        for(int i=0; i< s.Length; i++)
-        {
-            if (listCount.Count > 0 && i == listCount[0])
-            {
-                Console.WriteLine(list[0]);
-                result.Append(list[0]);
-                list.RemoveAt(0);
-                listCount.RemoveAt(0);
-                continue;
+                word[i]=s[u];
+                word[u]=s[i];
+                i++;
+                u--;
             }
             
-            result.Append(s[i]);
-        }
 
-        return result.ToString();
+            else if(!vowels.Any(p=> p==s[i]))
+                {word[i]=s[i];
+                i++;               
+                }
+            else if(!vowels.Any(p=> p==s[u]))    
+                {
+                word[u]=s[u];
+                u--;               
+                }
+        }
+        
+        
+        return new string(word);
     }
 }
