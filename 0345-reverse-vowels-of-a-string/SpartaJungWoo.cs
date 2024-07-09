@@ -1,13 +1,11 @@
-public class Solution
-{
-    public string ReverseVowels(string s)
-    {
+public class Solution {
+    public string ReverseVowels(string s) {
         List<char> list = new List<char>();
         List<int> listCount = new List<int>();
 
-        for (int i = 0; i < s.Length; i++)
+        for (int i=0; i < s.Length; i++)
         {
-            switch (s[i])
+            switch(s[i])
             {
                 case 'a':
                 case 'A':
@@ -19,20 +17,20 @@ public class Solution
                 case 'O':
                 case 'u':
                 case 'U':
-                    list.Insert(0, s[i]);
-                    listCount.Add(i);
-                    break;
+                list.Insert(0, s[i]);
+                listCount.Add( i);
+                break;
                 default:
-                    break;
+                break;
             }
         }
 
         if (list.Count <= 1) return s;
 
-        StringBuilder result = new StringBuilder();
+    StringBuilder result = new StringBuilder();
 
 
-        for (int i = 0; i < s.Length; i++)
+        for(int i=0; i< s.Length; i++)
         {
             if (listCount.Count > 0 && i == listCount[0])
             {
@@ -42,7 +40,7 @@ public class Solution
                 listCount.RemoveAt(0);
                 continue;
             }
-
+            
             result.Append(s[i]);
         }
 
