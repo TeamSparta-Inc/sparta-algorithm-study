@@ -1,35 +1,25 @@
 public class Solution {
     public string ReverseVowels(string s) {
-        List<char> vowels = new List<char>(){'a','A','E', 'e', 'i','I','O','o','u','U'};
-        char[] word= new char[s.Length];
-        int u=s.Length-1;
-        int i=0;
+        Stack<char> vowelsInTheString = new Stack<char>();
+        HashSet<char> vowels = new HashSet<char>(){'a', 'e', 'o', 'u', 'i', 'A', 'E', 'O', 'U', 'I'};
+        HashSet<int> indexesOfVowels = new HashSet<int>();
+        StringBuilder result = new StringBuilder(s);    
 
-
-        //leetcode
-        while(i<=u){
-           
-            if(vowels.Any(p=> p==s[i]) && vowels.Any(p=> p==s[u]))
-            {
-                word[i]=s[u];
-                word[u]=s[i];
-                i++;
-                u--;
+        for (var i = 0; i < s.Length; i++)
+        {
+            if(vowels.Contains(s[i])){
+                vowelsInTheString.Push(s[i]);
+                indexesOfVowels.Add(i);
             }
-            
-
-            else if(!vowels.Any(p=> p==s[i]))
-                {word[i]=s[i];
-                i++;               
-                }
-            else if(!vowels.Any(p=> p==s[u]))    
-                {
-                word[u]=s[u];
-                u--;               
-                }
         }
-        
-        
-        return new string(word);
+
+        for (var i = 0; i < s.Length; i++)
+        {
+            if(indexesOfVowels.Contains(i)){
+                result[i] = vowelsInTheString.Pop();
+            }
+        }
+
+        return result.ToString();
     }
 }
