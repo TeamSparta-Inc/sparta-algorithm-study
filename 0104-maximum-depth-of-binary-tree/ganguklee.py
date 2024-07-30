@@ -4,14 +4,14 @@
 #         self.val = val
 #         self.left = left
 #         self.right = right
+
 class Solution:
-    def go(self, node:TreeNode) -> int:
-        if not node:
-            return 0
-
-        return max(self.go(node.left), self.go(node.right)) + 1
     def maxDepth(self, root: Optional[TreeNode]) -> int:
-        return self.go(root)
-        
+        def go(node:TreeNode) -> int:
+            if not node:
+                return 0
 
+            return max(go(node.left), go(node.right)) + 1
+
+        return go(root)
         
