@@ -9,6 +9,11 @@ class Solution:
         if root:
             if root.val == val:
                 return root
-            return self.searchBST(root.left, val)
-            return self.searchBST(root.right, val)
-        return None
+            left_result = self.searchBST(root.left, val)
+            right_result = self.searchBST(root.right, val)
+            if left_result:
+                return left_result
+            if right_result:
+                return right_result
+        else:
+            return None
