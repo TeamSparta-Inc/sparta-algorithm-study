@@ -3,20 +3,11 @@
  * @param {number[]} nums2
  * @return {number[][]}
  */
-var findDifference = function(nums1, nums2) {
-    const map1 = new Map();
-    const map2 = new Map();
-    nums1.forEach(num => !map1.get(num) && map1.set(num, true))
-    nums2.forEach(num => !map2.get(num) && map2.set(num, true))
-
-    const result1 = {};
-    const result2 = {};
-    nums1.forEach(num => {
-        if(!map2.get(num)) result1[num] = num
-    });
-    nums2.forEach(num => {
-        if(!map1.get(num)) result2[num] = num
-    });
-
-    return [Object.values(result1), Object.values(result2)];
+var findDifference = function(a, b) {
+    let o={},p={},r=[[],[]],i=a.length,j=b.length
+    for(;i--;)o[a[i]]=1
+    for(;j--;)p[b[j]]=1
+    for(i in o)p[i]||r[0].push(+i)
+    for(i in p)o[i]||r[1].push(+i)
+    return r
 };
