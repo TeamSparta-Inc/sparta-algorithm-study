@@ -12,13 +12,11 @@ var findDifference = function(nums1, nums2) {
     const result1 = {};
     const result2 = {};
     nums1.forEach(num => {
-        if(!map2.get(num)) result1[num] = true
+        if(!map2.get(num)) result1[num] = num
     });
     nums2.forEach(num => {
-        if(!map1.get(num)) result2[num] = true
+        if(!map1.get(num)) result2[num] = num
     });
 
-    console.log(result1, result2);
-
-    // return [result1, result2];
+    return [Object.values(result1), Object.values(result2)];
 };
