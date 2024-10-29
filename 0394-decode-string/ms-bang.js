@@ -1,5 +1,6 @@
 const decodeString = s => {
   const stack = [];
+  console.log(stack)
   for (const char of s) {
     if (char !== "]") { stack.push(char); continue; }
     let cur = stack.pop();
@@ -10,6 +11,7 @@ const decodeString = s => {
     }
     let num = '';
     cur = stack.pop();
+    
     while (!Number.isNaN(Number(cur))) {
       num = cur + num;
       cur = stack.pop();
