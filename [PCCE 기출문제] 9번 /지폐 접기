@@ -1,0 +1,25 @@
+class Solution {
+    public int solution(int[] wallet, int[] bill) {
+        int answer = 0;
+        int billWidth = bill[0];
+        int billHeight = bill[1];
+
+        while (true) {
+            // 원래 방향 또는 90도 회전 방향으로 맞는지 확인
+            if ((billWidth <= wallet[0] && billHeight <= wallet[1]) || 
+                (billWidth <= wallet[1] && billHeight <= wallet[0])) {
+                break;
+            }
+            
+            // 항상 더 긴 쪽을 접기
+            if (billWidth >= billHeight) {
+                billWidth /= 2;
+            } else {
+                billHeight /= 2;
+            }
+            answer++;
+        }
+
+        return answer;
+    }
+}
