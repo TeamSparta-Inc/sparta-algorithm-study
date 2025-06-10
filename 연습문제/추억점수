@@ -1,0 +1,24 @@
+import java.util.*;
+
+class Solution {
+    public int[] solution(String[] name, int[] yearning, String[][] photo) {
+        // name과 yearning으로 그리움 점수 매핑을 만듭니다
+        Map<String, Integer> scoreMap = new HashMap<>();
+        for (int i = 0; i < name.length; i++) {
+            scoreMap.put(name[i], yearning[i]);
+        }
+        
+        // 각 사진별 추억 점수를 계산합니다
+        int[] answer = new int[photo.length];
+        for (int i = 0; i < photo.length; i++) {
+            int score = 0;
+            for (String person : photo[i]) {
+                // 해당 인물의 그리움 점수가 있으면 더합니다
+                score += scoreMap.getOrDefault(person, 0);
+            }
+            answer[i] = score;
+        }
+        
+        return answer;
+    }
+}
